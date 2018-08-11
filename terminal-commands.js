@@ -9,3 +9,17 @@ module.exports.ls = () => {
    console.log(filesToString);
   });
 };
+
+module.exports.touch = () => {
+  fs.writeFile(file, content, (err) => {
+    if (err) throw err;
+    console.log('New file has been saved!');
+  } )
+};
+
+module.exports.mkdir = () => {
+  fs.mkdir('./', dir, (err) =>  {
+    if (err) throw err;
+    console.log('New directory has been saved!');
+  } )
+};
